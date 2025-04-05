@@ -11,18 +11,23 @@ ENDCOLOR="\e[0m"
 
 clear
 
-echo -e "${BLUE}b${ENDCOLOR}${PURPLE}p${ENDCOLOR}OS - help"
-echo -e "welcome to the quick help menu!"
-echo -e "this will help you get started with bpOS."
-echo -e "to start the guide, type start."
-echo -e "to quit the help menu, type exit"
+printf "${BLUE}b${ENDCOLOR}${PURPLE}p${ENDCOLOR}OS - help \n"
+printf "welcome to the quick help menu! \n"
+printf "this will help you get started with bpOS. \n"
+printf "to start the guide, type start. \n"
+printf "to quit the help menu, type quit \n"
+
 read -p ">>>" help
 if [ "$help" = "start" ]; then
     echo "hi!"
 elif [ "$help" = "quit" ]; then
-    exit 255
+    cd .. # i know that there is a better way to go back to the start but this works and I don't care.
+    cd ..
+    chmod +x boot.sh # make the file executable
+    ./boot.sh # run the file
+    
 else
-    echo "'$help' is not a command."
+    printf "'$help' is not a command."
     clear
     sleep 1
 

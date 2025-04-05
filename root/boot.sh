@@ -11,18 +11,20 @@ ENDCOLOR="\e[0m"
 
 clear
 
-echo -e "${BLUE}b${ENDCOLOR}${PURPLE}p${ENDCOLOR}OS - main menu"
-echo -e "help for help, quit to quit"
+printf "${BLUE}b${ENDCOLOR}${PURPLE}p${ENDCOLOR}OS - main menu \n"
+printf "help for help, quit to quit \n"
 read -p ">>> " boot
 
 if [ "$boot" = "help" ]; then
     clear
     cd app/help
-    sh help.sh
+    chmod +x help.sh # make the file executable
+    ./help.sh # run the file
+
 elif [ "$boot" = "quit" ]; then
     exit 0
 else
-    echo "'$boot' is not a command."
+    printf "'$boot' is not a command."
    
     sleep 1
     clear

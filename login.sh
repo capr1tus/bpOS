@@ -26,6 +26,11 @@ clear
 
 echo "building colors"
 sleep 1
+clear
+
+echo "installing stuff"
+npm install 
+clear
 
 cd root # enter the root OS folder
 chmod +x boot.sh # make the boot.sh file executable

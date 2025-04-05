@@ -9,6 +9,10 @@ to run bpOS, make sure you are on a linux machine. otherwise, open the repositor
 
 once you are there, run the following command in the terminal:
 ```
+npm install
+```
+then
+```
 sh login.sh
 ``` 
 this starts the login sequence.
